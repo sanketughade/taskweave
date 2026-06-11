@@ -10,6 +10,9 @@
     --space-4: 16px;
     --space-5: 24px;
     --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
 
     /* Radius */
     --radius-sm: 8px;
@@ -25,4 +28,30 @@
     /* Animation */
     --transition-fast: 150ms ease;
     --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+
+    /* Sidebar width */
+    --sidebar-width: 280px;
+    --sidebar-collapsed-width: 72px;
+
+    /* Toolbar Height */
+    --topbar-height: 64px;
+
+    /* Z-Index Tokes */
+    --z-dropdown: 1000;
+    --z-sticky: 1010;
+    --z-overlay: 1020;
+    --z-modal: 1030;
+    --z-toast: 1040;
+    --z-tooltip: 1050;
+
+    /* Focus Ring Tokens */
+    --focus-ring-width: 3px;
+    --focus-ring-offset: 2px;
+
+    /* Container Widths */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
 }
