@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+@import './app/styles/reset.css';
+@import './app/styles/tokens.css';
+@import './app/styles/theme-light.css';
+@import './app/styles/theme-dark.css';
+@import './app/styles/typography.css';
+@import './app/styles/utilities.css';
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+}

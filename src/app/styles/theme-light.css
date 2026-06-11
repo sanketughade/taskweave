@@ -1,0 +1,22 @@
+html[data-theme="light"] {
+    --color-bg: #fafafa;
+    --color-surface: #ffffff;
+
+    --color-border: #e5e5e5;
+
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #6b7280;
+
+    --color-primary: #6366f1;
+    --color-primary-hover: #4f46e5;
+
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+    --color-info: #3b82f6;
+
+    --priority-critical: #ef4444;
+    --priority-high: #f97316;
+    --priority-medium: #f59e0b;
+    --priority-low: #6b7280;
+}
