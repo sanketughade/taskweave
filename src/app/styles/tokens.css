@@ -54,4 +54,8 @@
     --container-md: 768px;
     --container-lg: 1024px;
     --container-xl: 1280px;
+
+    
+    --focus-ring-primary: 0 0 0 3px rgb(99 102 241 / 20%);
+    --focus-ring-danger: 0 0 0 3px rgb(239 68 68 / 20%);
 }

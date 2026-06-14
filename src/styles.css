@@ -5,6 +5,7 @@
 @import './app/styles/theme-dark.css';
 @import './app/styles/typography.css';
 @import './app/styles/utilities.css';
+@import './app/styles/components/button.css';
 
 html,
 body {
