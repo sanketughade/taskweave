@@ -1,0 +1,72 @@
+.tw-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    font-family: var(--font-body);
+    font-width: 600;
+    line-height: 1;
+
+    white-space: nowrap;
+    user-select: none;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    transition: 
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast)
+}
+
+.tw-badge--sm {
+    height: 22px;
+    padding: 0 8px;
+
+    font-size: 11px;
+}
+
+.tw-badge--md {
+    height: 26px;
+    padding: 0 10px;
+
+    font-size: 12px;
+}
+
+.tw-badge--critical {
+    color: #B91C1C;
+    background: #FEE2E2;
+    border-color: #FECACA;
+}
+
+.tw-badge--high {
+    color: #C2410C;
+    background: #FFEDD5;
+    background-color: #FED7AA;
+}
+
+.tw-badge--medium {
+    color: #B45309;
+    background: #FEF37C;
+    border-color: #FDE68A;
+}
+
+.tw-badge--low {
+    color: #4B5563;
+    background: #F3F4F6;
+    border-color: #E5E7EB;
+}
+
+.tw-badge-success {
+    color: #047857;
+    background: #D1FAE5;
+    border-color: #A7F3D0;
+}
+
+.tw-badge--info {
+    color: #1D4ED8;
+    background: #DBEAFE;
+    border-color: #BFDBFE;
+}
