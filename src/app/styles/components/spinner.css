@@ -2,7 +2,6 @@
     display: inline-block;
     border-radius: 50%;
     border: 2px solid transparent;
-    border-top-color: var(--color-primary);
     animation: tw-spinner-rotate 700ms linear infinite;
 }
 
