@@ -1,0 +1,22 @@
+.tw-loading-host {
+    position: relative;
+}
+
+.tw-loading-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(255, 255, 255 / 55%);
+
+    z-index: 100;
+
+    pointer-events: all;
+}
+
+html[data-theme="dark"] .tw-loading-overlay {
+    background: rgb(15 15 15 / 55%);
+}

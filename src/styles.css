@@ -8,6 +8,8 @@
 @import './app/styles/components/button.css';
 @import './app/styles/components/input.css';
 @import './app/styles/components/badge.css';
+@import './app/styles/components/tw-loading.css';
+@import './app/styles/components/spinner.css';
 
 html,
 body {
