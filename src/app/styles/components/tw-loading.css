@@ -17,6 +17,10 @@
     pointer-events: all;
 }
 
+.tw-loading-overlay--button {
+    background: transparent;
+}
+
 html[data-theme="dark"] .tw-loading-overlay {
     background: rgb(15 15 15 / 55%);
 }

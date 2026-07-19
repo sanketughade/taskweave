@@ -14,6 +14,7 @@ export class TwLoadingDirective {
     readonly spinnerColor = input<SpinnerColor>('primary');
 
     private overlayElement?: HTMLDivElement | null;
+    private spinnerElement?: HTMLSpanElement | null;
 
     constructor(
         private readonly elementRef: ElementRef<HTMLElement>,
@@ -21,20 +22,79 @@ export class TwLoadingDirective {
     ) {
         effect(() => {
             if (this.twLoading()) {
-                this.showOverlay();
+                this.showLoading();
             } else {
-                this.hideOverlay();
+                this.hideLoading();
             }
         });
     }
 
-    private showOverlay(): void {
+    private showLoading(): void {
+        if (this.isButton()) {
+            this.showButtonLoading();
+        } else {
+            this.showContainerLoading();
+        }
+    }
+
+    private hideLoading(): void {
+        if (this.isButton()) {
+            this.hideButtonLoading();
+        } else {
+            this.hideContainerLoading();
+        }
+    }
+
+    private isButton(): boolean {
+        return this.elementRef.nativeElement.tagName.toLocaleLowerCase() === 'button';
+    }
+
+    private showButtonLoading(): void {
+        if (this.spinnerElement) {
+            return;
+        }
+
+        const button = this.elementRef.nativeElement as HTMLButtonElement;
+
+        this.renderer.setAttribute(button, 'disabled', '');
+
+        this.spinnerElement = this.renderer.createElement('span');
+
+        this.renderer.addClass(this.spinnerElement, 'tw-spinner');
+        this.renderer.addClass(this.spinnerElement, `tw-spinner--${this.spinnerSize()}`);
+        this.renderer.addClass(this.spinnerElement, `tw-spinner--${this.spinnerColor()}`);
+
+        this.renderer.setStyle(this.spinnerElement, 'margin-right', '0.5rem');
+
+        this.renderer.insertBefore(
+            button,
+            this.spinnerElement,
+            button.firstChild
+        );
+    }
+
+    private hideButtonLoading(): void {
+        if (!this.spinnerElement) {
+            return;
+        }
+
+        const button = this.elementRef.nativeElement;
+
+        this.renderer.removeChild(button, this.spinnerElement);
+        this.renderer.removeAttribute(button, 'disabled');
+
+        this.spinnerElement = null;
+    }
+
+    private showContainerLoading(): void {
         if (this.overlayElement) {
             return;
         }
 
+        const host = this.elementRef.nativeElement;
+
         this.renderer.addClass(
-            this.elementRef.nativeElement,
+            host,
             'tw-loading-host'
         );
 
@@ -73,18 +133,20 @@ export class TwLoadingDirective {
         );
     }
 
-    private hideOverlay() {
+    private hideContainerLoading() {
         if (!this.overlayElement) {
             return;
         }
 
+        const host = this.elementRef.nativeElement;
+
         this.renderer.removeChild(
-            this.elementRef.nativeElement,
+            host,
             this.overlayElement
         );
 
         this.renderer.removeClass(
-            this.elementRef.nativeElement,
+            host,
             'tw-loading-host'
         );
 
