@@ -1,0 +1,48 @@
+.tw-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 24rem;
+
+    padding: var(--space-10);
+
+    text-align: center;
+}
+
+.tw-empty-state--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: var(--space-6);
+
+    font-size: 4rem;
+    color: var(--color-text-secondary);
+}
+
+.tw-empty-state--content {
+    max-width: 32rem;
+}
+
+.tw-empty-state--title {
+    margin-bottom: var(--space-3);
+}
+
+.tw-empty-state--description {
+    margin: 0;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.tw-empty-state--actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--space-4);
+    margin-top: var(--space-5);
+    flex-wrap: wrap;
+}

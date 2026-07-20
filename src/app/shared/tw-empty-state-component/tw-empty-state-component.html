@@ -1,0 +1,21 @@
+<div class="tw-empty-state">
+    <div class="tw-empty-state--icon">
+        <ng-content select="[emptyStateIcon]"></ng-content>
+    </div>
+    
+    <div class="tw-empty-state--content">
+        <h2 class="tw-empty-state--title">
+            {{ title() }}
+        </h2>
+    
+        @if (description()) {
+            <p class="tw-empty-state--description">
+                {{ description() }}
+            </p>
+        }
+    </div>
+    
+    <div class="tw-empty-state--actions">
+        <ng-content select="[emptyStateActions]"></ng-content>
+    </div>
+</div>
