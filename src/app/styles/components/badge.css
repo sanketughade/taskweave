@@ -6,7 +6,7 @@
     width: fit-content;
 
     font-family: var(--font-body);
-    font-width: 600;
+    font-weight: 600;
     line-height: 1;
 
     white-space: nowrap;
@@ -59,7 +59,7 @@
     border-color: #E5E7EB;
 }
 
-.tw-badge-success {
+.tw-badge--success {
     color: #047857;
     background: #D1FAE5;
     border-color: #A7F3D0;
